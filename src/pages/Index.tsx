@@ -11,6 +11,7 @@ import { Separator } from '@/components/ui/separator';
 
 const Index = () => {
   const [selectedBoat, setSelectedBoat] = useState('');
+  const [duration, setDuration] = useState('');
 
   const boats = [
     {
@@ -316,7 +317,7 @@ const Index = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="duration">Длительность</Label>
-                  <Select>
+                  <Select value={duration} onValueChange={setDuration}>
                     <SelectTrigger id="duration">
                       <SelectValue placeholder="Выберите длительность" />
                     </SelectTrigger>
